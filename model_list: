@@ -1,0 +1,6 @@
+model_list:
+  - model_name: minimax-m2.5
+    litellm_params:
+      model: openai/minimax-m2.5
+      api_base: https://api.minimax.io/v1
+      api_key: "sk-cp-d4o62aQyCEQHpvV3sPss2H8-kB-8Pstzufyh7TUR5eE6uRFaWXzFkMJWPNzyY4aesh60_OHFkndmfyl2C5vVbr8AIVaEkoFw3K3FXK0vUjG9nVkAZTvOzXU"

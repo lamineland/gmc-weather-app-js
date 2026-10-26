@@ -1,0 +1,114 @@
+- generic [ref=e2]:
+  - link "Skip to members" [ref=e3] [cursor=pointer]:
+    - /url: "#members"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e12]:
+        - heading "OOD Library" [level=1] [ref=e13]
+        - paragraph [ref=e14]: Members, books, and loans on one desk.
+      - paragraph [ref=e15]:
+        - generic [ref=e16]: 3 members
+        - generic [ref=e17]: 5 books
+        - generic [ref=e18]: 2 on loan
+    - status [ref=e19]
+    - main [ref=e20]:
+      - region [ref=e21]:
+        - generic [ref=e22]:
+          - heading "Members" [level=2] [ref=e23]
+          - paragraph [ref=e24]: "3"
+        - group "Choose a member" [ref=e25]:
+          - generic [ref=e27] [cursor=pointer]:
+            - radio "Amira Benali Student amira.benali@campus.edu 1 of 3 on loan" [checked] [ref=e28]
+            - generic [ref=e29]: Amira Benali
+            - generic [ref=e30]: Student
+            - generic [ref=e31]: amira.benali@campus.edu
+            - generic [ref=e32]: 1 of 3 on loan
+          - generic [ref=e33] [cursor=pointer]:
+            - radio "Jonas Keller Student jonas.keller@campus.edu 0 of 3 on loan" [ref=e34]
+            - generic [ref=e35]: Jonas Keller
+            - generic [ref=e36]: Student
+            - generic [ref=e37]: jonas.keller@campus.edu
+            - generic [ref=e38]: 0 of 3 on loan
+          - generic [ref=e39] [cursor=pointer]:
+            - radio "Helen Okonkwo Teacher helen.okonkwo@campus.edu 1 of 6 on loan" [ref=e40]
+            - generic [ref=e41]: Helen Okonkwo
+            - generic [ref=e42]: Teacher
+            - generic [ref=e43]: helen.okonkwo@campus.edu
+            - generic [ref=e44]: 1 of 6 on loan
+        - generic [ref=e45]:
+          - heading "Notices for Amira Benali" [level=3] [ref=e46]
+          - list [ref=e47]:
+            - listitem [ref=e48]:
+              - paragraph [ref=e49]: "\"Clean Code\" is overdue. Please return it."
+              - time [ref=e50]: 22 Oct 2026
+            - listitem [ref=e51]:
+              - paragraph [ref=e52]: "\"Clean Code\" is due on 16 Oct 2026."
+              - time [ref=e53]: 22 Oct 2026
+        - group [ref=e54]:
+          - generic "Add a member" [ref=e55] [cursor=pointer]
+      - region [ref=e56]:
+        - generic [ref=e57]:
+          - heading "Catalog" [level=2] [ref=e58]
+          - paragraph [ref=e59]: "5"
+        - paragraph [ref=e60]: Borrowing as Amira Benali.
+        - list [ref=e61]:
+          - listitem [ref=e62]:
+            - generic [ref=e63]:
+              - heading "Clean Code" [level=3] [ref=e64]
+              - paragraph [ref=e65]: Robert C. Martin
+              - paragraph [ref=e66]: ISBN 978-0132350884
+            - generic [ref=e67]:
+              - generic [ref=e68]: On loan
+              - button "Borrow" [disabled] [ref=e69]
+          - listitem [ref=e70]:
+            - generic [ref=e71]:
+              - heading "The Design of Everyday Things" [level=3] [ref=e72]
+              - paragraph [ref=e73]: Don Norman
+              - paragraph [ref=e74]: ISBN 978-0465050659
+            - generic [ref=e75]:
+              - generic [ref=e76]: Available
+              - button "Borrow" [ref=e77] [cursor=pointer]
+          - listitem [ref=e78]:
+            - generic [ref=e79]:
+              - heading "Designing Data-Intensive Applications" [level=3] [ref=e80]
+              - paragraph [ref=e81]: Martin Kleppmann
+              - paragraph [ref=e82]: ISBN 978-1449373320
+            - generic [ref=e83]:
+              - generic [ref=e84]: Available
+              - button "Borrow" [ref=e85] [cursor=pointer]
+          - listitem [ref=e86]:
+            - generic [ref=e87]:
+              - heading "Head First Design Patterns" [level=3] [ref=e88]
+              - paragraph [ref=e89]: Eric Freeman
+              - paragraph [ref=e90]: ISBN 978-1492078005
+            - generic [ref=e91]:
+              - generic [ref=e92]: On loan
+              - button "Borrow" [disabled] [ref=e93]
+          - listitem [ref=e94]:
+            - generic [ref=e95]:
+              - heading "The Pragmatic Programmer" [level=3] [ref=e96]
+              - paragraph [ref=e97]: David Thomas
+              - paragraph [ref=e98]: ISBN 978-0135957059
+            - generic [ref=e99]:
+              - generic [ref=e100]: Available
+              - button "Borrow" [ref=e101] [cursor=pointer]
+        - group [ref=e102]:
+          - generic "Add a book" [ref=e103] [cursor=pointer]
+      - region [ref=e104]:
+        - generic [ref=e105]:
+          - heading "Loans" [level=2] [ref=e106]
+          - generic [ref=e107]:
+            - checkbox "All members" [ref=e108]
+            - text: All members
+        - paragraph [ref=e109]: Books Amira Benali has out.
+        - list [ref=e110]:
+          - listitem [ref=e111]:
+            - generic [ref=e112]:
+              - heading "Clean Code" [level=3] [ref=e113]
+              - paragraph [ref=e114]:
+                - generic [ref=e115]: Overdue
+                - generic [ref=e116]: Borrowed 2 Oct 2026
+                - generic [ref=e117]: Due 16 Oct 2026
+            - button "Return" [ref=e119] [cursor=pointer]
+    - contentinfo [ref=e120]:
+      - paragraph [ref=e121]: Singleton library. Factory for students and teachers. Observer notices for due dates.

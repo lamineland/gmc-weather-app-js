@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Weather app — current temperature, conditions and 5-day forecast for any city." />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app__header">
+      <h1 class="app__title">Weather<span>App</span></h1>
+      <p class="app__tagline">Temperature, conditions and forecast for any city</p>
+    </header>
+
+    <section class="search" aria-label="City search">
+      <form id="search-form" class="search__form" novalidate>
+        <label class="search__label" for="city-input">City</label>
+        <div class="search__row">
+          <input
+            id="city-input"
+            class="search__input"
+            type="text"
+            name="city"
+            placeholder="Search a city… e.g. Paris, Tokyo, Casablanca"
+            autocomplete="off"
+            spellcheck="false"
+            required
+          />
+          <button id="search-btn" class="search__button" type="submit">Search</button>
+        </div>
+      </form>
+
+      <div class="units" role="group" aria-label="Temperature unit">
+        <button id="unit-c" class="units__button units__button--active" type="button" data-unit="celsius">°C</button>
+        <button id="unit-f" class="units__button" type="button" data-unit="fahrenheit">°F</button>
+      </div>
+    </section>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <main>
+      <section id="weather-card" class="card card--main" hidden>
+        <div class="card__location">
+          <h2 id="location-name" class="card__city">—</h2>
+          <p id="location-date" class="card__date">—</p>
+        </div>
+
+        <div class="card__now">
+          <span id="weather-icon" class="card__icon" aria-hidden="true">☀️</span>
+          <div class="card__temp-block">
+            <p class="card__temperature"><span id="temperature">--</span><span id="temperature-unit" class="card__unit">°C</span></p>
+            <p id="weather-description" class="card__description">—</p>
+          </div>
+        </div>
+
+        <ul class="details" aria-label="Weather details">
+          <li class="details__item">
+            <span class="details__label">Feels like</span>
+            <span id="feels-like" class="details__value">--</span>
+          </li>
+          <li class="details__item">
+            <span class="details__label">Humidity</span>
+            <span id="humidity" class="details__value">--</span>
+          </li>
+          <li class="details__item">
+            <span class="details__label">Wind</span>
+            <span id="wind" class="details__value">--</span>
+          </li>
+          <li class="details__item">
+            <span class="details__label">Pressure</span>
+            <span id="pressure" class="details__value">--</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="forecast-section" class="card card--forecast" hidden>
+        <h2 class="card__subtitle">5-day forecast</h2>
+        <ul id="forecast-list" class="forecast"></ul>
+      </section>
+    </main>
+
+    <footer class="app__footer">
+      <p>Data from <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> (free, no API key needed).</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
