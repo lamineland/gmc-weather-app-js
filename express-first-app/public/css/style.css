@@ -1,0 +1,268 @@
+/* ---------- Base ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --bg: #f3f4f6;
+  --card-bg: #ffffff;
+  --danger: #dc2626;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ---------- Navbar ---------- */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: var(--primary);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+nav .brand {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: var(--primary-dark);
+  color: #ffffff;
+}
+
+/* ---------- Layout ---------- */
+main {
+  max-width: 960px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+h1 {
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: var(--primary);
+  margin: 1.5rem 0 0.75rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--muted);
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.hero h1 {
+  color: #ffffff;
+}
+
+.hero p {
+  color: #dbeafe;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ---------- Cards ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.card .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+}
+
+/* ---------- Forms ---------- */
+form {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  max-width: 560px;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--text);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--primary);
+  border-color: var(--primary);
+}
+
+button[type="submit"] {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--primary-dark);
+}
+
+/* ---------- Info / contact info ---------- */
+.info-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.info-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.info-list li strong {
+  color: var(--primary-dark);
+}
+
+/* ---------- Closed page ---------- */
+.closed-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.closed-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  max-width: 560px;
+}
+
+.closed-card .icon {
+  font-size: 4rem;
+}
+
+.closed-card h1 {
+  color: var(--danger);
+  margin: 1rem 0;
+}
+
+.closed-card .hours {
+  background-color: var(--bg);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
